@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NovaBrew Style Preview - Minimal</title>
+  <style>
+    :root {
+      --bg: #f6f1e8;
+      --surface: rgba(255, 252, 247, 0.9);
+      --ink: #2f241d;
+      --muted: #766456;
+      --line: rgba(90, 63, 43, 0.15);
+      --accent: #9a6b45;
+      --accent-soft: rgba(154, 107, 69, 0.12);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: "Avenir Next", "Helvetica Neue", Arial, sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(255, 255, 255, 0.8), transparent 32%),
+        linear-gradient(160deg, #f8f3eb 0%, #eee4d6 100%);
+      color: var(--ink);
+      display: grid;
+      place-items: center;
+      padding: 24px;
+    }
+
+    .card {
+      width: min(760px, 100%);
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      padding: 32px;
+      box-shadow: 0 24px 80px rgba(67, 45, 28, 0.08);
+      backdrop-filter: blur(12px);
+    }
+
+    .eyebrow {
+      font-size: 12px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-size: clamp(2rem, 4vw, 3.4rem);
+      line-height: 1;
+      margin: 0 0 14px;
+      font-weight: 600;
+    }
+
+    p {
+      margin: 0 0 28px;
+      color: var(--muted);
+      font-size: 1rem;
+      line-height: 1.6;
+      max-width: 56ch;
+    }
+
+    .options {
+      display: grid;
+      gap: 14px;
+    }
+
+    .option {
+      border: 1px solid var(--line);
+      background: white;
+      border-radius: 18px;
+      padding: 18px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: transform 160ms ease, border-color 160ms ease, box-shadow 160ms ease;
+    }
+
+    .option:hover {
+      transform: translateY(-2px);
+      border-color: rgba(154, 107, 69, 0.3);
+      box-shadow: 0 18px 40px rgba(67, 45, 28, 0.08);
+    }
+
+    .option strong {
+      display: block;
+      margin-bottom: 4px;
+      font-size: 1rem;
+    }
+
+    .option span {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .tag {
+      background: var(--accent-soft);
+      color: var(--accent);
+      border-radius: 999px;
+      padding: 8px 12px;
+      font-size: 0.78rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <div class="eyebrow">NovaBrew Minimal Preview</div>
+    <h1>Which scene feels most like your perfect coffee morning?</h1>
+    <p>
+      Clean, airy, and premium. This direction makes the quiz feel polished and editorial,
+      like a specialty coffee brand with strong design taste.
+    </p>
+    <section class="options">
+      <div class="option">
+        <div>
+          <strong>Soft sunlight through a linen curtain</strong>
+          <span>A calm ritual, a ceramic mug, and zero rush.</span>
+        </div>
+        <div class="tag">Option A</div>
+      </div>
+      <div class="option">
+        <div>
+          <strong>Fog over a city skyline at 7 a.m.</strong>
+          <span>Quiet confidence, structure, and a perfect first sip.</span>
+        </div>
+        <div class="tag">Option B</div>
+      </div>
+      <div class="option">
+        <div>
+          <strong>A winding road into somewhere unfamiliar</strong>
+          <span>The kind of morning that promises a story.</span>
+        </div>
+        <div class="tag">Option C</div>
+      </div>
+      <div class="option">
+        <div>
+          <strong>A burst of wildflowers after rain</strong>
+          <span>Bright, surprising, and impossible to ignore.</span>
+        </div>
+        <div class="tag">Option D</div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
